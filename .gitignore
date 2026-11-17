@@ -8,9 +8,6 @@ data/raw/**
 *.tgz
 *.rar
 
-# Intermediate processed tables
-data/processed/*.csv
-
 # Python & IDE cache
 __pycache__/
 *.py[cod]
