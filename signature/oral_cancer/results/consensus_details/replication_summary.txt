@@ -1,0 +1,16 @@
+=== REPLICATION SUMMARY ===
+Thresholds: padj<0.05, |log2FC|>=1.0, baseMean>=10 in both cohorts
+Shared tested genes:               15272
+Significant in GSE101547:          2995
+Significant in GSE213862:          3580
+Significant in both:               2215
+Same direction in both:            2202 / 2215 (99.41%)
+Spearman r, all shared genes:      0.778
+Spearman r, consensus genes:       0.883
+Consensus genes (all classes):     2202
+Genes in oral_signature.csv:       2013 (657 up, 1356 down)
+Excluded by class: immunoglobulin=52, muscle_adipose=62, noncoding=75
+
+=== LEAVE-ONE-COHORT-OUT (signature built from one cohort, tested in the other; top 150 per direction) ===
+GSE101547 -> GSE213862: 300 genes | same direction in held-out cohort: 100.0% | significant + same direction: 98.7% | Spearman r of log2FC: 0.922 | overlap with final top list: 146
+GSE213862 -> GSE101547: 300 genes | same direction in held-out cohort: 100.0% | significant + same direction: 99.0% | Spearman r of log2FC: 0.942 | overlap with final top list: 229
