@@ -1,0 +1,9 @@
+# Raw data & archives (never commit raw counts)
+data/raw/**
+!data/raw/**/
+!data/raw/**/README.md
+*.gz
+*.zip
+*.tar
+*.tgz
+*.rar
