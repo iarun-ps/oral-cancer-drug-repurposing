@@ -1,23 +1,42 @@
-# Raw data & archives (never commit raw counts)
+# ---- raw & processed data: keep at the source, link in data/raw/oral_cancer/README.md ----
 data/raw/**
+!data/raw/
 !data/raw/**/
 !data/raw/**/README.md
+data/processed/
+
+# large / binary data files anywhere
 *.gz
 *.zip
 *.tar
-*.tgz
-*.rar
+*.h5
+*.h5ad
+*.rds
+*.RData
+*.bam
+*.sam
+*.fastq
+*.fq
 
-# Python & IDE cache
+# Python
 __pycache__/
 *.py[cod]
+.ipynb_checkpoints/
 .venv/
 venv/
-.ipynb_checkpoints/
-.vscode/
-.idea/
+env/
+.pytest_cache/
+.ruff_cache/
 
-# OS & Office temp files
+# secrets - the repo is public
+.env
+*.key
+*.pem
+*token*
+
+# OS / editor
 .DS_Store
 Thumbs.db
-~$*
+desktop.ini
+.vscode/
+.idea/
