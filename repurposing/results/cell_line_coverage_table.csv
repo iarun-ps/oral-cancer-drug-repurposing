@@ -1,0 +1,200 @@
+Cell_line,n_signatures,n_drugs,diseases
+MCF7,415,66,breast adenocarcinoma
+A549,341,69,lung cancer
+PC3,333,74,prostate adenocarcinoma
+A375,307,71,melanoma
+HT29,288,65,colon adenocarcinoma
+HA1E,264,52,
+MCF10A,213,16,breast carcinoma
+HELA,203,16,cervical adenocarcinoma
+YAPC,179,17,pancreatic carcinoma
+MDAMB231,177,14,breast adenocarcinoma
+THP1,172,18,leukemia
+HEPG2,163,45,carcinoma
+HEK293,153,15,
+VCAP,153,72,prostate adenocarcinoma
+HCC515,145,49,lung cancer
+JURKAT,142,16,leukemia
+HUVEC,93,12,
+NPC,78,32,
+NEU,77,31,
+ASC,61,21,
+U2OS,60,28,osteosarcoma
+CD34,56,9,
+SKBR3,56,4,breast adenocarcinoma
+HME1,54,8,leukemia
+HS578T,52,4,breast carcinoma
+BT20,52,4,breast carcinoma
+SKL,48,8,
+SHSY5Y,47,8,neuroblastoma
+PHH,31,15,
+XC.L10,29,7,
+HUES3,24,4,
+MNEU,23,4,
+NOMO1,22,7,leukemia
+NKDBA,19,5,
+BJAB,18,1,lymphoma
+MINO,18,1,lymphoma
+XC.R10,18,6,
+TMD8,18,1,lymphoma
+HUH7,17,5,carcinoma
+SKB,15,15,
+HEC108,15,9,endometrial cancer
+LNCAP,15,2,prostate carcinoma
+U937,15,8,lymphoma
+HPTEC,12,1,
+HCT116,12,6,colon carcinoma
+NCIH508,12,6,colon adenocarcinoma
+AGS,12,8,gastric adenocarcinoma
+NCIH596,12,6,lung cancer
+NCIH2073,12,6,lung cancer
+NCIH1573,9,3,lung cancer
+SNU407,9,3,colon carcinoma
+OVTOKO,9,3,ovarian adenocarcinoma
+NCIH2110,9,3,lung cancer
+NCIH838,9,3,lung cancer
+SH4,9,3,melanoma
+MDAMB468,9,3,breast adenocarcinoma
+MELHO,9,3,melanoma
+A204,9,3,rhabdomyosarcoma
+22RV1,9,3,prostate carcinoma
+CAL29,9,3,bladder transitional cell carcinoma
+BEN,9,3,lung cancer
+HEC1A,9,3,endometrial cancer
+HEC251,9,3,endometrial cancer
+BC3C,9,3,bladder transitional cell carcinoma
+HEC265,9,3,endometrial cancer
+CJM,9,3,melanoma
+GI1,9,3,glioblastoma
+IGR37,9,3,melanoma
+JHH5,9,3,carcinoma
+T47D,9,3,breast carcinoma
+SKES1,9,3,ewing's sarcoma
+HL60,8,1,leukemia
+HEK293T,8,1,
+HAP1,8,4,chronic myeloid leukemia
+HCC95,7,3,lung cancer
+XC.P091,6,2,
+XC.P033,6,2,
+TYKNU,6,6,ovarian carcinoma
+XC.500,6,2,
+HT115,6,6,colon carcinoma
+IM95,6,2,gastric adenocarcinoma
+KMS34,6,1,myeloma
+GP2D,6,2,colon adenocarcinoma
+HBL1,6,1,lymphoma
+HCC15,6,6,lung cancer
+K562,6,1,leukemia
+JHH7,6,2,carcinoma
+H1299,6,6,lung cancer
+EFO27,6,6,ovarian carcinoma
+COV644,6,6,ovarian carcinoma
+COV434,6,2,granulosa cell tumor
+CORL23,6,6,lung cancer
+CL34,6,6,colon adenocarcinoma
+BICR6,6,2,carcinoma
+ES2,6,2,ovarian carcinoma
+HCC1588,6,2,lung cancer
+H1975,6,1,lung cancer
+G401,6,2,carcinoma
+BT474,6,2,breast carcinoma
+A673,6,6,ewing's sarcoma
+JHUEM2,6,6,endometrial cancer
+HEC151,6,2,endometrial cancer
+LOVO,6,6,colon adenocarcinoma
+XC.P932,6,2,
+XC.P910,6,2,
+RKO,6,6,colon adenocarcinoma
+RCC10RGB,6,2,carcinoma
+RMUGS,6,6,ovarian carcinoma
+OV7,6,6,ovarian carcinoma
+OCILY10,6,1,lymphoma
+OCILY19,6,1,lymphoma
+RMGI,6,6,ovarian carcinoma
+T3M10,6,6,lung cancer
+SNGM,6,6,endometrial cancer
+SKMEL5,6,1,melanoma
+SNU1040,6,6,colon carcinoma
+SNUC4,6,6,colon adenocarcinoma
+SNUC5,6,6,colon adenocarcinoma
+SUDHL4,6,1,lymphoma
+SKMEL3,6,2,melanoma
+SKMEL28,6,6,melanoma
+OCILY3,6,1,lymphoma
+PL21,6,6,leukemia
+NCIH2172,6,2,lung cancer
+NCIH1975,6,1,lung cancer
+MKN45,6,2,gastric adenocarcinoma
+MDST8,6,6,colon carcinoma
+NALM6,6,1,leukemia
+NCIH1694,6,6,lung cancer
+NCIH1437,6,2,lung cancer
+NCIH1836,6,6,lung cancer
+OC316,6,2,ovarian adenocarcinoma
+NCIH841,6,2,lung cancer
+OVK18,6,2,ovarian carcinoma
+P1A82,6,1,
+YH13,6,2,astrocytoma
+XC.P935,6,2,
+XC.P933,6,2,
+XC.P934,6,2,
+ZR751,6,2,breast carcinoma
+XC.P915,6,2,
+XC.P026,6,2,
+XC.P031,6,2,
+XC.P907,6,2,
+XC.P904,6,2,
+XC.P905,6,2,
+XC.P906,6,2,
+XC.P909,6,2,
+XC.P908,6,2,
+XC.P092,6,2,
+XC.P901,6,2,
+XC.P936,6,2,
+XC.P931,6,2,
+XC.P911,6,2,
+XC.P912,6,2,
+XC.P922,6,2,
+XC.P930,6,2,
+XC.P914,6,2,
+SW480,6,6,colon adenocarcinoma
+TC32,6,2,ewing's sarcoma
+SW620,6,6,colon adenocarcinoma
+SW948,6,6,colon adenocarcinoma
+TOV112D,6,2,endometrial cancer
+WA09,6,2,
+SKLU1,6,6,lung cancer
+SKMEL1,6,6,melanoma
+SKM1,6,6,leukemia
+WSUDLCL2,5,5,lymphoma
+DV90,5,5,lung cancer
+OAW28,5,2,ovarian cystadenocarcinoma
+U251MG,5,2,astrocytoma
+MCLF130CN,3,3,
+MCLF135CN,3,3,
+MCLF137CN,3,3,
+MCLF162SZ,3,3,
+MCLF126CN,3,3,
+MCLF123SZ,3,3,
+NL20,3,3,
+MCLF100SZ,3,3,
+MCLF076SZ,3,3,
+MCLF056CN,3,3,
+MCLF117SZ,3,3,
+MCLF027CN,3,3,
+MCLF040SZ,3,3,
+MCLF037SZ,3,3,
+MCLF035SZ,3,3,
+MCLF0067SZ,3,3,
+MCLF033SZ,3,3,
+MCLF141SZ,3,3,
+MCLF054CN,3,3,
+MCLF051CN,3,3,
+MCLF022CN,3,3,
+MCLF015CN,3,3,
+1HAE,2,2,
+HFL1,2,2,
+HMELZ,2,1,
+IMR90,2,2,
+WI38,2,2,
+HS27A,1,1,

@@ -1,0 +1,3 @@
+rank,drug_name,perturbagen_id,pubchem_cid,smiles,reversal_score,raw_score,cell_line,source_tool,known_targets,approval_status,moa,smiles_clean
+13,BRD-M47397275,BRD-M47397275,,,11.414808178379005,-11.414808178379005,all,SigCom_LINCS,,unknown,,
+16,BRD-K59023263,BRD-K59023263,,,11.384226332471368,-11.384226332471368,all,SigCom_LINCS,,unknown,,
