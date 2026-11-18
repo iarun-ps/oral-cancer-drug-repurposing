@@ -1,0 +1,16 @@
+# Dependencies for disease signature analysis
+# Includes the core project requirements
+
+-r requirements.txt
+
+# Differential gene expression analysis
+pydeseq2
+
+# Statistical analysis
+scipy
+
+# Visualization
+matplotlib
+
+# PCA and machine learning
+scikit-learn

@@ -1,0 +1,7 @@
+drug_name,smiles,target_gene,pdb_id,predicted_affinity,confidence,method,is_known_target,in_training_data
+MockDrug_A,CCO,EGFR,MOCK,6.9,0.9,qsar,yes,no
+MockDrug_A,CCO,TP53,MOCK,7.2,0.85,qsar,no,no
+MockDrug_B,CCN,PTGS2,MOCK,8.2,0.88,qsar,yes,no
+MockDrug_C,CCC,CDK4,MOCK,7.0,0.8,qsar,yes,no
+MockDrug_B,CCN,AKT1,MOCK,7.8,0.82,qsar,no,no
+MockDrug_C,CCC,MTOR,MOCK,7.0,0.8,qsar,no,no
