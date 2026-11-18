@@ -45,3 +45,7 @@ pipeline/results/mock_shortlist.csv
 
 # Generated mock sensitivity results
 pipeline/results/mock_shortlist_sensitivity_*.csv
+
+# Part C: large or downloaded files
+binding/models/
+binding/structures/

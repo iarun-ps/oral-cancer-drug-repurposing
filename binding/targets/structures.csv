@@ -1,0 +1,9 @@
+target,pdb_id,bound_molecule,resolution_A
+EGFR,5HG8,compound 634 (ATP-pocket inhibitor); L858R/T790M mutant,1.42
+PIK3CA,8EXL,taselisib,1.989
+CDK6,5L2S,abemaciclib,2.27
+MET,9SXJ,capmatinib (wild-type),1.315
+FGFR1,5EW8,JNJ-42756493 (erdafitinib),1.63
+KDR,3WZD,lenvatinib,1.57
+MAP2K1,7B7R,compound 4 + ATP analogue (check on RCSB page),1.7
+HDAC2,4LY1,benzamide inhibitor (check on RCSB page),1.57
