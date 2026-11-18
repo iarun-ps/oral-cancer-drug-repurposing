@@ -42,3 +42,6 @@ desktop.ini
 .idea/
 # Generated mock pipeline results
 pipeline/results/mock_shortlist.csv
+
+# Generated mock sensitivity results
+pipeline/results/mock_shortlist_sensitivity_*.csv

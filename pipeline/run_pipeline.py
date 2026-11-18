@@ -5,6 +5,7 @@ from pathlib import Path
 
 import pandas as pd
 
+from pipeline.rank_sensitivity import sensitivity_analysis
 from pipeline.validate_contract import (
     BINDING_COLUMNS,
     DRUG_COLUMNS,
@@ -157,7 +158,24 @@ def run_pipeline(signature_path, drugs_path, binding_path, output_path,
     final = merged[columns]
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
+    # Generate ranking sensitivity analysis
+    summary, rankings = sensitivity_analysis(final)
+
     final.to_csv(output_path, index=False)
+
+    summary_path = output_path.with_name(
+        f"{output_path.stem}_sensitivity_summary.csv"
+    )
+    rankings_path = output_path.with_name(
+        f"{output_path.stem}_sensitivity_rankings.csv"
+    )
+
+    summary.to_csv(summary_path, index=False)
+    rankings.to_csv(rankings_path, index=False)
+
+    print("PASS: Ranking sensitivity analysis")
+    print(f"Saved: {summary_path}")
+    print(f"Saved: {rankings_path}")
 
     print(f"\nPASS: Generated {len(final)} shortlisted drugs")
     print(f"Saved: {output_path}")
