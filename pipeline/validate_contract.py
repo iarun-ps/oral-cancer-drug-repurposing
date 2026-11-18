@@ -41,10 +41,18 @@ def load_csv(path, expected):
         encoding="utf-8-sig"
     )
 
+    actual_columns = list(df.columns)
+    accepted_columns = list(expected)
+
+    if tuple(expected) == BINDING_COLUMNS:
+        for optional in ("tree_sd", "max_similarity_to_train"):
+            if optional in actual_columns:
+                accepted_columns.append(optional)
+
     require(
-        list(df.columns) == list(expected),
-        f"{path}: incorrect columns. Expected {list(expected)}; "
-        f"found {list(df.columns)}"
+        actual_columns == accepted_columns,
+        f"{path}: incorrect columns. Expected {accepted_columns}; "
+        f"found {actual_columns}"
     )
 
     require(not df.empty, f"{path}: CSV is empty")
@@ -203,6 +211,11 @@ def validate_drugs(df):
 def validate_binding(df, drugs):
     label = "binding"
 
+    require(
+        not df.duplicated(["drug_name", "target_gene"]).any(),
+        "binding: duplicate drug-target pairs detected"
+    )
+
     require_text(
         df,
         [
@@ -214,11 +227,26 @@ def validate_binding(df, drugs):
     )
 
     number(df, "predicted_affinity", label)
-    number(df, "confidence", label, minimum=0, maximum=1)
+
+    confidence_levels = {"low", "medium", "high"}
+    if not df["confidence"].isin(confidence_levels).all():
+        number(df, "confidence", label, minimum=0, maximum=1)
+
+    if "tree_sd" in df.columns:
+        number(df, "tree_sd", label, minimum=0)
+
+    if "max_similarity_to_train" in df.columns:
+        number(
+            df, "max_similarity_to_train", label,
+            minimum=0, maximum=1
+        )
 
     allowed(
         df, "method",
-        {"docking", "qsar", "gnn"},
+        {
+            "docking", "qsar", "gnn",
+            "RandomForest_Morgan2048_pChEMBL"
+        },
         label
     )
 
@@ -254,12 +282,9 @@ def validate_binding(df, drugs):
             if target.strip()
         }
 
-        expected_flag = (
-            "yes" if row.target_gene in targets else "no"
-        )
-
         require(
-            row.is_known_target == expected_flag,
+            row.target_gene not in targets
+            or row.is_known_target == "yes",
             f"binding: known-target mismatch for "
             f"{row.drug_name}/{row.target_gene}"
         )

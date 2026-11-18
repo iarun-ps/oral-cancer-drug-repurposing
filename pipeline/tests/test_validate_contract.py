@@ -153,3 +153,54 @@ def test_invalid_numeric_value(signature):
 
     with pytest.raises(ValueError):
         validate_signature(signature)
+
+
+def test_real_binding_accepts_documented_extra_columns():
+    from pipeline.validate_contract import BINDING_COLUMNS
+
+    df = load_csv(
+        Path("binding/results/binding_scores.csv"),
+        BINDING_COLUMNS,
+    )
+
+    assert len(df) == 784
+    assert "tree_sd" in df.columns
+    assert "max_similarity_to_train" in df.columns
+
+
+def test_categorical_confidence(binding, drugs):
+    binding["confidence"] = "low"
+    validate_binding(binding, drugs)
+
+
+def test_random_forest_method(binding, drugs):
+    binding["method"] = "RandomForest_Morgan2048_pChEMBL"
+    validate_binding(binding, drugs)
+
+
+def test_additional_known_target(binding, drugs):
+    drug_name = binding.loc[0, "drug_name"]
+    drugs.loc[drugs["drug_name"] == drug_name, "known_targets"] = ""
+    binding.loc[0, "is_known_target"] = "yes"
+
+    validate_binding(binding, drugs)
+
+
+def test_invalid_similarity(binding, drugs):
+    binding["tree_sd"] = "0.5"
+    binding["max_similarity_to_train"] = "1.5"
+
+    with pytest.raises(ValueError):
+        validate_binding(binding, drugs)
+
+
+def test_duplicate_drug_target_pair(binding, drugs):
+    duplicate = binding.iloc[[0]].copy()
+
+    binding = pd.concat(
+        [binding, duplicate],
+        ignore_index=True
+    )
+
+    with pytest.raises(ValueError, match="duplicate drug-target"):
+        validate_binding(binding, drugs)
