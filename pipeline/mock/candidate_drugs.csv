@@ -1,0 +1,4 @@
+rank,drug_name,pubchem_cid,smiles,reversal_score,raw_score,cell_line,source_tool,known_targets,approval_status,used_in_oral_cancer
+1,MockDrug_A,900001,CCO,0.90,-0.90,all,MOCK,EGFR,unknown,unknown
+2,MockDrug_B,900002,CCN,0.75,-0.75,all,MOCK,PTGS2,unknown,unknown
+3,MockDrug_C,900003,CCC,0.60,-0.60,all,MOCK,CDK4,unknown,unknown

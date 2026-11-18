@@ -1,0 +1,37 @@
+name: Pipeline CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+          cache: pip
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Check code quality
+        run: python -m ruff check pipeline/
+
+      - name: Validate mock data
+        run: python pipeline/validate_contract.py
+
+      - name: Validate real disease signature
+        run: python pipeline/validate_contract.py --signature signature/oral_cancer/results/oral_signature.csv
+
+      - name: Run automated tests
+        run: python -m pytest pipeline/tests/ -q

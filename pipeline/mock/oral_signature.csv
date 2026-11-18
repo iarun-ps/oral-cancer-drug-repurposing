@@ -1,0 +1,4 @@
+gene_symbol,entrez_id,log2fc,padj,direction,rank,n_cohorts
+MMP1,4312,3.5,0.0001,up,1,2
+IL24,11009,2.8,0.001,up,2,2
+EGFR,1956,-2.1,0.003,down,1,2
